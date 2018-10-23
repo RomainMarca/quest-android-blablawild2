@@ -40,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button bItinerarylist = findViewById(R.id.bt_itinerarylist);
+        bItinerarylist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ItineraryListActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
